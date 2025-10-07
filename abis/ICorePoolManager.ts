@@ -1,0 +1,509 @@
+export const ICorePoolManagerAbi = [
+  {
+    "type": "function",
+    "name": "canRebalance",
+    "inputs": [],
+    "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "decreaseLiquidity",
+    "inputs": [
+      { "name": "liquidityToRemove", "type": "uint128", "internalType": "uint128" }
+    ],
+    "outputs": [
+      { "name": "amount0", "type": "uint256", "internalType": "uint256" },
+      { "name": "amount1", "type": "uint256", "internalType": "uint256" }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "depositCapital",
+    "inputs": [
+      { "name": "amount0", "type": "uint256", "internalType": "uint256" },
+      { "name": "amount1", "type": "uint256", "internalType": "uint256" }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "emergencyWithdraw",
+    "inputs": [
+      { "name": "recipient", "type": "address", "internalType": "address" }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "factory",
+    "inputs": [],
+    "outputs": [{ "name": "", "type": "address", "internalType": "address" }],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getCurrentPoolTick",
+    "inputs": [],
+    "outputs": [{ "name": "", "type": "int24", "internalType": "int24" }],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getCurrentTicks",
+    "inputs": [],
+    "outputs": [
+      { "name": "lower", "type": "int24", "internalType": "int24" },
+      { "name": "upper", "type": "int24", "internalType": "int24" }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getGaugeAddress",
+    "inputs": [],
+    "outputs": [
+      { "name": "gaugeAddress", "type": "address", "internalType": "address" }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getLiquidity",
+    "inputs": [],
+    "outputs": [{ "name": "", "type": "uint128", "internalType": "uint128" }],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getPositionInfo",
+    "inputs": [],
+    "outputs": [
+      { "name": "tickLower", "type": "int24", "internalType": "int24" },
+      { "name": "tickUpper", "type": "int24", "internalType": "int24" },
+      { "name": "liquidity", "type": "uint128", "internalType": "uint128" }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getPositionValue",
+    "inputs": [],
+    "outputs": [
+      { "name": "value0", "type": "uint256", "internalType": "uint256" },
+      { "name": "value1", "type": "uint256", "internalType": "uint256" }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getRangeWidth",
+    "inputs": [],
+    "outputs": [{ "name": "", "type": "int24", "internalType": "int24" }],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getRewardTokens",
+    "inputs": [],
+    "outputs": [
+      { "name": "rewardTokens", "type": "address[]", "internalType": "address[]" }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getTickSpacing",
+    "inputs": [],
+    "outputs": [{ "name": "", "type": "int24", "internalType": "int24" }],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "harvestRewardsToStrategy",
+    "inputs": [],
+    "outputs": [
+      { "name": "tokens", "type": "address[]", "internalType": "address[]" },
+      { "name": "amounts", "type": "uint256[]", "internalType": "uint256[]" }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "increaseLiquidity",
+    "inputs": [
+      { "name": "amount0", "type": "uint256", "internalType": "uint256" },
+      { "name": "amount1", "type": "uint256", "internalType": "uint256" },
+      {
+        "name": "swapConfig",
+        "type": "tuple",
+        "internalType": "struct ICorePoolManager.SwapConfig",
+        "components": [
+          { "name": "zeroForOne", "type": "bool", "internalType": "bool" },
+          { "name": "amountIn", "type": "uint256", "internalType": "uint256" },
+          { "name": "amountOutMin", "type": "uint256", "internalType": "uint256" },
+          { "name": "input", "type": "bytes", "internalType": "bytes" }
+        ]
+      }
+    ],
+    "outputs": [
+      { "name": "liquidity", "type": "uint128", "internalType": "uint128" }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "isPositionOutOfRange",
+    "inputs": [],
+    "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "isTickMovementSafe",
+    "inputs": [
+      { "name": "newTick", "type": "int24", "internalType": "int24" }
+    ],
+    "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "pool",
+    "inputs": [],
+    "outputs": [{ "name": "", "type": "address", "internalType": "address" }],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "rebalancePosition",
+    "inputs": [
+      { "name": "totalAmount0", "type": "uint256", "internalType": "uint256" },
+      { "name": "totalAmount1", "type": "uint256", "internalType": "uint256" },
+      {
+        "name": "config",
+        "type": "tuple",
+        "internalType": "struct ICorePoolManager.SwapConfig",
+        "components": [
+          { "name": "zeroForOne", "type": "bool", "internalType": "bool" },
+          { "name": "amountIn", "type": "uint256", "internalType": "uint256" },
+          { "name": "amountOutMin", "type": "uint256", "internalType": "uint256" },
+          { "name": "input", "type": "bytes", "internalType": "bytes" }
+        ]
+      }
+    ],
+    "outputs": [
+      { "name": "tokenId", "type": "uint256", "internalType": "uint256" }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setMaxTickMovement",
+    "inputs": [
+      { "name": "movement", "type": "int24", "internalType": "int24" }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setRangeWidth",
+    "inputs": [
+      { "name": "rangeWidth", "type": "int24", "internalType": "int24" }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setSlippage",
+    "inputs": [
+      { "name": "swapSlippage", "type": "uint256", "internalType": "uint256" },
+      { "name": "mintSlippage", "type": "uint256", "internalType": "uint256" }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setTickBounds",
+    "inputs": [
+      { "name": "minTick", "type": "int24", "internalType": "int24" },
+      { "name": "maxTick", "type": "int24", "internalType": "int24" }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "token0",
+    "inputs": [],
+    "outputs": [{ "name": "", "type": "address", "internalType": "address" }],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "token1",
+    "inputs": [],
+    "outputs": [{ "name": "", "type": "address", "internalType": "address" }],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "tokenId",
+    "inputs": [],
+    "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "withdrawAll",
+    "inputs": [],
+    "outputs": [
+      { "name": "amount0", "type": "uint256", "internalType": "uint256" },
+      { "name": "amount1", "type": "uint256", "internalType": "uint256" }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "withdrawAllLiquidityAndCollectFees",
+    "inputs": [],
+    "outputs": [
+      { "name": "collected0", "type": "uint256", "internalType": "uint256" },
+      { "name": "collected1", "type": "uint256", "internalType": "uint256" }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "withdrawAndSendLiquidity",
+    "inputs": [],
+    "outputs": [
+      { "name": "amount0", "type": "uint256", "internalType": "uint256" },
+      { "name": "amount1", "type": "uint256", "internalType": "uint256" }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "event",
+    "name": "CapitalDeposited",
+    "inputs": [
+      { "name": "from", "type": "address", "indexed": true, "internalType": "address" },
+      { "name": "amount0", "type": "uint256", "indexed": false, "internalType": "uint256" },
+      { "name": "amount1", "type": "uint256", "indexed": false, "internalType": "uint256" }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "LiquidityAdded",
+    "inputs": [
+      { "name": "tokenId", "type": "uint256", "indexed": true, "internalType": "uint256" },
+      { "name": "tickLower", "type": "int24", "indexed": false, "internalType": "int24" },
+      { "name": "tickUpper", "type": "int24", "indexed": false, "internalType": "int24" },
+      { "name": "liquidityAdded", "type": "uint128", "indexed": false, "internalType": "uint128" },
+      { "name": "amount0Desired", "type": "uint256", "indexed": false, "internalType": "uint256" },
+      { "name": "amount1Desired", "type": "uint256", "indexed": false, "internalType": "uint256" },
+      { "name": "amount0Used", "type": "uint256", "indexed": false, "internalType": "uint256" },
+      { "name": "amount1Used", "type": "uint256", "indexed": false, "internalType": "uint256" },
+      { "name": "idle0", "type": "uint256", "indexed": false, "internalType": "uint256" },
+      { "name": "idle1", "type": "uint256", "indexed": false, "internalType": "uint256" },
+      { "name": "swapLoss", "type": "uint256", "indexed": false, "internalType": "uint256" },
+      { "name": "currentTick", "type": "int24", "indexed": false, "internalType": "int24" }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "LiquidityRemoved",
+    "inputs": [
+      { "name": "tokenId", "type": "uint256", "indexed": true, "internalType": "uint256" },
+      { "name": "tickLower", "type": "int24", "indexed": false, "internalType": "int24" },
+      { "name": "tickUpper", "type": "int24", "indexed": false, "internalType": "int24" },
+      { "name": "liquidityRemoved", "type": "uint128", "indexed": false, "internalType": "uint128" },
+      { "name": "liquidityRemaining", "type": "uint128", "indexed": false, "internalType": "uint128" },
+      { "name": "amount0Removed", "type": "uint256", "indexed": false, "internalType": "uint256" },
+      { "name": "amount1Removed", "type": "uint256", "indexed": false, "internalType": "uint256" },
+      { "name": "fees0Collected", "type": "uint256", "indexed": false, "internalType": "uint256" },
+      { "name": "fees1Collected", "type": "uint256", "indexed": false, "internalType": "uint256" },
+      { "name": "currentTick", "type": "int24", "indexed": false, "internalType": "int24" }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "LiquidityWithdrawn",
+    "inputs": [
+      { "name": "amount0", "type": "uint256", "indexed": false, "internalType": "uint256" },
+      { "name": "amount1", "type": "uint256", "indexed": false, "internalType": "uint256" }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "PositionRebalanced",
+    "inputs": [
+      { "name": "oldTokenId", "type": "uint256", "indexed": true, "internalType": "uint256" },
+      { "name": "newTokenId", "type": "uint256", "indexed": true, "internalType": "uint256" },
+      { "name": "newTickLower", "type": "int24", "indexed": false, "internalType": "int24" },
+      { "name": "newTickUpper", "type": "int24", "indexed": false, "internalType": "int24" }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "PositionUpgrade",
+    "inputs": [
+      { "name": "tokenId", "type": "uint256", "indexed": false, "internalType": "uint256" },
+      { "name": "tickLower", "type": "int24", "indexed": false, "internalType": "int24" },
+      { "name": "tickUpper", "type": "int24", "indexed": false, "internalType": "int24" },
+      { "name": "liquidity", "type": "uint128", "indexed": false, "internalType": "uint128" }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "RangeWidthUpdated",
+    "inputs": [
+      { "name": "rangeWidth", "type": "int24", "indexed": false, "internalType": "int24" }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "RewardsHarvested",
+    "inputs": [
+      { "name": "tokens", "type": "address[]", "indexed": false, "internalType": "address[]" },
+      { "name": "amounts", "type": "uint256[]", "indexed": false, "internalType": "uint256[]" }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "SlippageSet",
+    "inputs": [
+      { "name": "swapSlippage", "type": "uint256", "indexed": false, "internalType": "uint256" },
+      { "name": "mintSlippage", "type": "uint256", "indexed": false, "internalType": "uint256" }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "SwapExecuted",
+    "inputs": [
+      { "name": "tokenIn", "type": "address", "indexed": true, "internalType": "address" },
+      { "name": "tokenOut", "type": "address", "indexed": true, "internalType": "address" },
+      { "name": "amountIn", "type": "uint256", "indexed": false, "internalType": "uint256" },
+      { "name": "amountOut", "type": "uint256", "indexed": false, "internalType": "uint256" },
+      { "name": "expectedAmountOut", "type": "uint256", "indexed": false, "internalType": "uint256" },
+      { "name": "swapLoss", "type": "uint256", "indexed": false, "internalType": "uint256" },
+      { "name": "tickBefore", "type": "int24", "indexed": false, "internalType": "int24" },
+      { "name": "tickAfter", "type": "int24", "indexed": false, "internalType": "int24" }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "TickBoundsSet",
+    "inputs": [
+      { "name": "minTick", "type": "int24", "indexed": false, "internalType": "int24" },
+      { "name": "maxTick", "type": "int24", "indexed": false, "internalType": "int24" }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "error",
+    "name": "ForbiddenSwapCall",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "GaugeNotFound",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "GaugeStakeFailed",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "InsufficientTokensForActiveRange",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "InvalidAmount",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "InvalidPool",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "InvalidRangeWidth",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "InvalidSwapAmount",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "InvalidSwapData",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "InvalidTicks",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "NotAuthorized",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "Paused",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "PositionNotActive",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "PositionNotInRange",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "SwapFailed",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "SwapRateLimitExceeded",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "ZeroAddress",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "ZeroAmounts",
+    "inputs": []
+  }
+] as const;

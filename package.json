@@ -1,0 +1,27 @@
+{
+  "name": "liq-indexer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "ponder dev",
+    "start": "ponder start",
+    "codegen": "ponder codegen"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rowhq/liq-indexer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rowhq/liq-indexer/issues"
+  },
+  "homepage": "https://github.com/rowhq/liq-indexer#readme",
+  "description": "Ponder indexer for tracking Impermanent Loss on liquidity manager positions",
+  "dependencies": {
+    "@ponder/core": "^0.7.17",
+    "viem": "^2.38.0"
+  }
+}
