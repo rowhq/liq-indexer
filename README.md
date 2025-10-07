@@ -29,17 +29,14 @@ cp .env.example .env
 
 ### Configuration
 
-1. **Update `.env`** with your RPC URLs:
-   ```bash
-   PONDER_RPC_URL_10=https://opt-mainnet.g.alchemy.com/v2/YOUR_API_KEY
-   ```
+1. **Update `.env`** with your contract address and start block:
+   - RPC URL is pre-configured for Base network
+   - Just add your contract deployment info in `ponder.config.ts`
 
 2. **Update `ponder.config.ts`** with your contract addresses:
    ```typescript
-   optimism: {
-     address: "0xYourContractAddress", // Replace with actual address
-     startBlock: 12345678,              // Replace with deployment block
-   },
+   address: "0xYourContractAddress", // Replace with actual address
+   startBlock: 12345678,              // Replace with deployment block
    ```
 
 ### Running
