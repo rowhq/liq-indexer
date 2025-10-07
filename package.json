@@ -21,7 +21,6 @@
   "homepage": "https://github.com/rowhq/liq-indexer#readme",
   "description": "Ponder indexer for tracking Impermanent Loss on liquidity manager positions",
   "dependencies": {
-    "@ponder/core": "^0.7.17",
-    "viem": "^2.38.0"
+    "ponder": "^0.13.12"
   }
 }

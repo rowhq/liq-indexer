@@ -1,36 +1,34 @@
-import { createConfig } from "@ponder/core";
-import { http } from "viem";
+import { defineConfig } from "ponder";
 
-import { ICorePoolManagerAbi } from "./abis/ICorePoolManager";
-
-export default createConfig({
-  networks: {
-    // Configure networks where your contracts are deployed
-    // Update these with your actual RPC endpoints
-    optimism: {
+export default defineConfig({
+  networks: [
+    {
+      name: "optimism",
       chainId: 10,
-      transport: http(process.env.PONDER_RPC_URL_10),
+      rpcUrl: process.env.PONDER_RPC_URL_10 || "https://mainnet.optimism.io",
     },
     // Add more networks as needed
-    // base: {
+    // {
+    //   name: "base",
     //   chainId: 8453,
-    //   transport: http(process.env.PONDER_RPC_URL_8453),
+    //   rpcUrl: process.env.PONDER_RPC_URL_8453 || "https://mainnet.base.org",
     // },
-  },
-  contracts: {
-    CorePoolManager: {
-      abi: ICorePoolManagerAbi,
-      network: {
-        // Configure for each network where the contract is deployed
-        optimism: {
-          address: "0x0000000000000000000000000000000000000000", // TODO: Replace with actual address
-          startBlock: 0, // TODO: Replace with deployment block
-        },
-        // base: {
-        //   address: "0x0000000000000000000000000000000000000000", // TODO: Replace with actual address
-        //   startBlock: 0, // TODO: Replace with deployment block
-        // },
-      },
+  ],
+  contracts: [
+    {
+      name: "CorePoolManager",
+      network: "optimism",
+      abi: "./abis/ICorePoolManager.ts",
+      address: "0x0000000000000000000000000000000000000000", // TODO: Replace with actual address
+      startBlock: 0, // TODO: Replace with deployment block
     },
-  },
+    // Add more contract instances as needed
+    // {
+    //   name: "CorePoolManager",
+    //   network: "base",
+    //   abi: "./abis/ICorePoolManager.ts",
+    //   address: "0x0000000000000000000000000000000000000000", // TODO: Replace with actual address
+    //   startBlock: 0, // TODO: Replace with deployment block
+    // },
+  ],
 });
