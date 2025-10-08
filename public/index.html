@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IL Tracker Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .card {
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+        }
+        .badge-positive {
+            background-color: #10b981;
+            color: white;
+        }
+        .badge-negative {
+            background-color: #ef4444;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <div class="min-h-screen">
+        <!-- Header -->
+        <header class="bg-gray-800 border-b border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h1 class="text-3xl font-bold text-white">⚡ IL Tracker Dashboard</h1>
+                        <p class="text-gray-400 mt-1">Real-time Impermanent Loss tracking across all pool managers</p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div id="priceIndicator" class="text-xs text-gray-500 flex items-center gap-2">
+                            <span class="inline-block w-2 h-2 bg-green-500 rounded-full"></span>
+                            <span>Prices: Live</span>
+                        </div>
+                        <button onclick="refreshAll()" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
+                            </svg>
+                            Refresh
+                        </button>
+                        <div id="lastUpdate" class="text-sm text-gray-400"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Pool Managers Section -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">📊 Pool Managers</h2>
+                <div id="poolManagers" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="flex items-center justify-center h-32">
+                        <div class="loading"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tabs -->
+            <div class="mb-6 border-b border-gray-700">
+                <nav class="flex space-x-8">
+                    <button onclick="showTab('active')" id="tab-active" class="tab-button py-4 px-1 border-b-2 font-medium text-sm">
+                        Active Intervals
+                    </button>
+                    <button onclick="showTab('closed')" id="tab-closed" class="tab-button py-4 px-1 border-b-2 font-medium text-sm">
+                        Closed Intervals
+                    </button>
+                    <button onclick="showTab('hourly')" id="tab-hourly" class="tab-button py-4 px-1 border-b-2 font-medium text-sm">
+                        Hourly Aggregations
+                    </button>
+                    <button onclick="showTab('rebalances')" id="tab-rebalances" class="tab-button py-4 px-1 border-b-2 font-medium text-sm">
+                        Rebalances
+                    </button>
+                </nav>
+            </div>
+
+            <!-- Tab Content -->
+            <div id="tabContent">
+                <!-- Active Intervals -->
+                <div id="content-active" class="tab-content">
+                    <div id="activeIntervals"></div>
+                </div>
+
+                <!-- Closed Intervals -->
+                <div id="content-closed" class="tab-content hidden">
+                    <div id="closedIntervals"></div>
+                </div>
+
+                <!-- Hourly Aggregations -->
+                <div id="content-hourly" class="tab-content hidden">
+                    <div class="mb-6">
+                        <canvas id="hourlyChart" class="bg-gray-800 rounded-lg p-4"></canvas>
+                    </div>
+                    <div id="hourlyAggregations"></div>
+                </div>
+
+                <!-- Rebalances -->
+                <div id="content-rebalances" class="tab-content hidden">
+                    <div id="rebalancesList"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
