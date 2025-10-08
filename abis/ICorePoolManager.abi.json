@@ -166,12 +166,22 @@
     "inputs": [],
     "outputs": [
       {
-        "name": "value0",
+        "name": "staked0",
         "type": "uint256",
         "internalType": "uint256"
       },
       {
-        "name": "value1",
+        "name": "staked1",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "idle0",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "idle1",
         "type": "uint256",
         "internalType": "uint256"
       }
@@ -751,6 +761,49 @@
       },
       {
         "name": "newTickUpper",
+        "type": "int24",
+        "indexed": false,
+        "internalType": "int24"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "PositionSnapshot",
+    "inputs": [
+      {
+        "name": "tokenId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "amount0Before",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "amount1Before",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "amount0After",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "amount1After",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "currentTick",
         "type": "int24",
         "indexed": false,
         "internalType": "int24"

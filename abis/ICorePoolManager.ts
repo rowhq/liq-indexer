@@ -1,20 +1,39 @@
-export const ICorePoolManagerAbi = [
+export const ICorePoolManagerAbi =
+[
   {
     "type": "function",
     "name": "canRebalance",
     "inputs": [],
-    "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
     "stateMutability": "view"
   },
   {
     "type": "function",
     "name": "decreaseLiquidity",
     "inputs": [
-      { "name": "liquidityToRemove", "type": "uint128", "internalType": "uint128" }
+      {
+        "name": "liquidityToRemove",
+        "type": "uint128",
+        "internalType": "uint128"
+      }
     ],
     "outputs": [
-      { "name": "amount0", "type": "uint256", "internalType": "uint256" },
-      { "name": "amount1", "type": "uint256", "internalType": "uint256" }
+      {
+        "name": "amount0",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "amount1",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
     ],
     "stateMutability": "nonpayable"
   },
@@ -22,8 +41,16 @@ export const ICorePoolManagerAbi = [
     "type": "function",
     "name": "depositCapital",
     "inputs": [
-      { "name": "amount0", "type": "uint256", "internalType": "uint256" },
-      { "name": "amount1", "type": "uint256", "internalType": "uint256" }
+      {
+        "name": "amount0",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "amount1",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
     ],
     "outputs": [],
     "stateMutability": "nonpayable"
@@ -32,7 +59,11 @@ export const ICorePoolManagerAbi = [
     "type": "function",
     "name": "emergencyWithdraw",
     "inputs": [
-      { "name": "recipient", "type": "address", "internalType": "address" }
+      {
+        "name": "recipient",
+        "type": "address",
+        "internalType": "address"
+      }
     ],
     "outputs": [],
     "stateMutability": "nonpayable"
@@ -41,14 +72,26 @@ export const ICorePoolManagerAbi = [
     "type": "function",
     "name": "factory",
     "inputs": [],
-    "outputs": [{ "name": "", "type": "address", "internalType": "address" }],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
     "stateMutability": "view"
   },
   {
     "type": "function",
     "name": "getCurrentPoolTick",
     "inputs": [],
-    "outputs": [{ "name": "", "type": "int24", "internalType": "int24" }],
+    "outputs": [
+      {
+        "name": "",
+        "type": "int24",
+        "internalType": "int24"
+      }
+    ],
     "stateMutability": "view"
   },
   {
@@ -56,8 +99,16 @@ export const ICorePoolManagerAbi = [
     "name": "getCurrentTicks",
     "inputs": [],
     "outputs": [
-      { "name": "lower", "type": "int24", "internalType": "int24" },
-      { "name": "upper", "type": "int24", "internalType": "int24" }
+      {
+        "name": "lower",
+        "type": "int24",
+        "internalType": "int24"
+      },
+      {
+        "name": "upper",
+        "type": "int24",
+        "internalType": "int24"
+      }
     ],
     "stateMutability": "view"
   },
@@ -66,7 +117,11 @@ export const ICorePoolManagerAbi = [
     "name": "getGaugeAddress",
     "inputs": [],
     "outputs": [
-      { "name": "gaugeAddress", "type": "address", "internalType": "address" }
+      {
+        "name": "gaugeAddress",
+        "type": "address",
+        "internalType": "address"
+      }
     ],
     "stateMutability": "view"
   },
@@ -74,7 +129,13 @@ export const ICorePoolManagerAbi = [
     "type": "function",
     "name": "getLiquidity",
     "inputs": [],
-    "outputs": [{ "name": "", "type": "uint128", "internalType": "uint128" }],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint128",
+        "internalType": "uint128"
+      }
+    ],
     "stateMutability": "view"
   },
   {
@@ -82,9 +143,21 @@ export const ICorePoolManagerAbi = [
     "name": "getPositionInfo",
     "inputs": [],
     "outputs": [
-      { "name": "tickLower", "type": "int24", "internalType": "int24" },
-      { "name": "tickUpper", "type": "int24", "internalType": "int24" },
-      { "name": "liquidity", "type": "uint128", "internalType": "uint128" }
+      {
+        "name": "tickLower",
+        "type": "int24",
+        "internalType": "int24"
+      },
+      {
+        "name": "tickUpper",
+        "type": "int24",
+        "internalType": "int24"
+      },
+      {
+        "name": "liquidity",
+        "type": "uint128",
+        "internalType": "uint128"
+      }
     ],
     "stateMutability": "view"
   },
@@ -93,8 +166,26 @@ export const ICorePoolManagerAbi = [
     "name": "getPositionValue",
     "inputs": [],
     "outputs": [
-      { "name": "value0", "type": "uint256", "internalType": "uint256" },
-      { "name": "value1", "type": "uint256", "internalType": "uint256" }
+      {
+        "name": "staked0",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "staked1",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "idle0",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "idle1",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
     ],
     "stateMutability": "view"
   },
@@ -102,7 +193,13 @@ export const ICorePoolManagerAbi = [
     "type": "function",
     "name": "getRangeWidth",
     "inputs": [],
-    "outputs": [{ "name": "", "type": "int24", "internalType": "int24" }],
+    "outputs": [
+      {
+        "name": "",
+        "type": "int24",
+        "internalType": "int24"
+      }
+    ],
     "stateMutability": "view"
   },
   {
@@ -110,7 +207,11 @@ export const ICorePoolManagerAbi = [
     "name": "getRewardTokens",
     "inputs": [],
     "outputs": [
-      { "name": "rewardTokens", "type": "address[]", "internalType": "address[]" }
+      {
+        "name": "rewardTokens",
+        "type": "address[]",
+        "internalType": "address[]"
+      }
     ],
     "stateMutability": "view"
   },
@@ -118,7 +219,13 @@ export const ICorePoolManagerAbi = [
     "type": "function",
     "name": "getTickSpacing",
     "inputs": [],
-    "outputs": [{ "name": "", "type": "int24", "internalType": "int24" }],
+    "outputs": [
+      {
+        "name": "",
+        "type": "int24",
+        "internalType": "int24"
+      }
+    ],
     "stateMutability": "view"
   },
   {
@@ -126,8 +233,16 @@ export const ICorePoolManagerAbi = [
     "name": "harvestRewardsToStrategy",
     "inputs": [],
     "outputs": [
-      { "name": "tokens", "type": "address[]", "internalType": "address[]" },
-      { "name": "amounts", "type": "uint256[]", "internalType": "uint256[]" }
+      {
+        "name": "tokens",
+        "type": "address[]",
+        "internalType": "address[]"
+      },
+      {
+        "name": "amounts",
+        "type": "uint256[]",
+        "internalType": "uint256[]"
+      }
     ],
     "stateMutability": "nonpayable"
   },
@@ -135,22 +250,50 @@ export const ICorePoolManagerAbi = [
     "type": "function",
     "name": "increaseLiquidity",
     "inputs": [
-      { "name": "amount0", "type": "uint256", "internalType": "uint256" },
-      { "name": "amount1", "type": "uint256", "internalType": "uint256" },
+      {
+        "name": "amount0",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "amount1",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
       {
         "name": "swapConfig",
         "type": "tuple",
         "internalType": "struct ICorePoolManager.SwapConfig",
         "components": [
-          { "name": "zeroForOne", "type": "bool", "internalType": "bool" },
-          { "name": "amountIn", "type": "uint256", "internalType": "uint256" },
-          { "name": "amountOutMin", "type": "uint256", "internalType": "uint256" },
-          { "name": "input", "type": "bytes", "internalType": "bytes" }
+          {
+            "name": "zeroForOne",
+            "type": "bool",
+            "internalType": "bool"
+          },
+          {
+            "name": "amountIn",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "amountOutMin",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "input",
+            "type": "bytes",
+            "internalType": "bytes"
+          }
         ]
       }
     ],
     "outputs": [
-      { "name": "liquidity", "type": "uint128", "internalType": "uint128" }
+      {
+        "name": "liquidity",
+        "type": "uint128",
+        "internalType": "uint128"
+      }
     ],
     "stateMutability": "nonpayable"
   },
@@ -158,45 +301,95 @@ export const ICorePoolManagerAbi = [
     "type": "function",
     "name": "isPositionOutOfRange",
     "inputs": [],
-    "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
     "stateMutability": "view"
   },
   {
     "type": "function",
     "name": "isTickMovementSafe",
     "inputs": [
-      { "name": "newTick", "type": "int24", "internalType": "int24" }
+      {
+        "name": "newTick",
+        "type": "int24",
+        "internalType": "int24"
+      }
     ],
-    "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
     "stateMutability": "view"
   },
   {
     "type": "function",
     "name": "pool",
     "inputs": [],
-    "outputs": [{ "name": "", "type": "address", "internalType": "address" }],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
     "stateMutability": "view"
   },
   {
     "type": "function",
     "name": "rebalancePosition",
     "inputs": [
-      { "name": "totalAmount0", "type": "uint256", "internalType": "uint256" },
-      { "name": "totalAmount1", "type": "uint256", "internalType": "uint256" },
+      {
+        "name": "totalAmount0",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "totalAmount1",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
       {
         "name": "config",
         "type": "tuple",
         "internalType": "struct ICorePoolManager.SwapConfig",
         "components": [
-          { "name": "zeroForOne", "type": "bool", "internalType": "bool" },
-          { "name": "amountIn", "type": "uint256", "internalType": "uint256" },
-          { "name": "amountOutMin", "type": "uint256", "internalType": "uint256" },
-          { "name": "input", "type": "bytes", "internalType": "bytes" }
+          {
+            "name": "zeroForOne",
+            "type": "bool",
+            "internalType": "bool"
+          },
+          {
+            "name": "amountIn",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "amountOutMin",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "input",
+            "type": "bytes",
+            "internalType": "bytes"
+          }
         ]
       }
     ],
     "outputs": [
-      { "name": "tokenId", "type": "uint256", "internalType": "uint256" }
+      {
+        "name": "tokenId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
     ],
     "stateMutability": "nonpayable"
   },
@@ -204,7 +397,11 @@ export const ICorePoolManagerAbi = [
     "type": "function",
     "name": "setMaxTickMovement",
     "inputs": [
-      { "name": "movement", "type": "int24", "internalType": "int24" }
+      {
+        "name": "movement",
+        "type": "int24",
+        "internalType": "int24"
+      }
     ],
     "outputs": [],
     "stateMutability": "nonpayable"
@@ -213,7 +410,11 @@ export const ICorePoolManagerAbi = [
     "type": "function",
     "name": "setRangeWidth",
     "inputs": [
-      { "name": "rangeWidth", "type": "int24", "internalType": "int24" }
+      {
+        "name": "rangeWidth",
+        "type": "int24",
+        "internalType": "int24"
+      }
     ],
     "outputs": [],
     "stateMutability": "nonpayable"
@@ -222,8 +423,16 @@ export const ICorePoolManagerAbi = [
     "type": "function",
     "name": "setSlippage",
     "inputs": [
-      { "name": "swapSlippage", "type": "uint256", "internalType": "uint256" },
-      { "name": "mintSlippage", "type": "uint256", "internalType": "uint256" }
+      {
+        "name": "swapSlippage",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "mintSlippage",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
     ],
     "outputs": [],
     "stateMutability": "nonpayable"
@@ -232,8 +441,16 @@ export const ICorePoolManagerAbi = [
     "type": "function",
     "name": "setTickBounds",
     "inputs": [
-      { "name": "minTick", "type": "int24", "internalType": "int24" },
-      { "name": "maxTick", "type": "int24", "internalType": "int24" }
+      {
+        "name": "minTick",
+        "type": "int24",
+        "internalType": "int24"
+      },
+      {
+        "name": "maxTick",
+        "type": "int24",
+        "internalType": "int24"
+      }
     ],
     "outputs": [],
     "stateMutability": "nonpayable"
@@ -242,21 +459,39 @@ export const ICorePoolManagerAbi = [
     "type": "function",
     "name": "token0",
     "inputs": [],
-    "outputs": [{ "name": "", "type": "address", "internalType": "address" }],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
     "stateMutability": "view"
   },
   {
     "type": "function",
     "name": "token1",
     "inputs": [],
-    "outputs": [{ "name": "", "type": "address", "internalType": "address" }],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
     "stateMutability": "view"
   },
   {
     "type": "function",
     "name": "tokenId",
     "inputs": [],
-    "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
     "stateMutability": "view"
   },
   {
@@ -264,8 +499,16 @@ export const ICorePoolManagerAbi = [
     "name": "withdrawAll",
     "inputs": [],
     "outputs": [
-      { "name": "amount0", "type": "uint256", "internalType": "uint256" },
-      { "name": "amount1", "type": "uint256", "internalType": "uint256" }
+      {
+        "name": "amount0",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "amount1",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
     ],
     "stateMutability": "nonpayable"
   },
@@ -274,8 +517,16 @@ export const ICorePoolManagerAbi = [
     "name": "withdrawAllLiquidityAndCollectFees",
     "inputs": [],
     "outputs": [
-      { "name": "collected0", "type": "uint256", "internalType": "uint256" },
-      { "name": "collected1", "type": "uint256", "internalType": "uint256" }
+      {
+        "name": "collected0",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "collected1",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
     ],
     "stateMutability": "nonpayable"
   },
@@ -284,8 +535,16 @@ export const ICorePoolManagerAbi = [
     "name": "withdrawAndSendLiquidity",
     "inputs": [],
     "outputs": [
-      { "name": "amount0", "type": "uint256", "internalType": "uint256" },
-      { "name": "amount1", "type": "uint256", "internalType": "uint256" }
+      {
+        "name": "amount0",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "amount1",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
     ],
     "stateMutability": "nonpayable"
   },
@@ -293,9 +552,24 @@ export const ICorePoolManagerAbi = [
     "type": "event",
     "name": "CapitalDeposited",
     "inputs": [
-      { "name": "from", "type": "address", "indexed": true, "internalType": "address" },
-      { "name": "amount0", "type": "uint256", "indexed": false, "internalType": "uint256" },
-      { "name": "amount1", "type": "uint256", "indexed": false, "internalType": "uint256" }
+      {
+        "name": "from",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "amount0",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "amount1",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
     ],
     "anonymous": false
   },
@@ -303,18 +577,78 @@ export const ICorePoolManagerAbi = [
     "type": "event",
     "name": "LiquidityAdded",
     "inputs": [
-      { "name": "tokenId", "type": "uint256", "indexed": true, "internalType": "uint256" },
-      { "name": "tickLower", "type": "int24", "indexed": false, "internalType": "int24" },
-      { "name": "tickUpper", "type": "int24", "indexed": false, "internalType": "int24" },
-      { "name": "liquidityAdded", "type": "uint128", "indexed": false, "internalType": "uint128" },
-      { "name": "amount0Desired", "type": "uint256", "indexed": false, "internalType": "uint256" },
-      { "name": "amount1Desired", "type": "uint256", "indexed": false, "internalType": "uint256" },
-      { "name": "amount0Used", "type": "uint256", "indexed": false, "internalType": "uint256" },
-      { "name": "amount1Used", "type": "uint256", "indexed": false, "internalType": "uint256" },
-      { "name": "idle0", "type": "uint256", "indexed": false, "internalType": "uint256" },
-      { "name": "idle1", "type": "uint256", "indexed": false, "internalType": "uint256" },
-      { "name": "swapLoss", "type": "uint256", "indexed": false, "internalType": "uint256" },
-      { "name": "currentTick", "type": "int24", "indexed": false, "internalType": "int24" }
+      {
+        "name": "tokenId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "tickLower",
+        "type": "int24",
+        "indexed": false,
+        "internalType": "int24"
+      },
+      {
+        "name": "tickUpper",
+        "type": "int24",
+        "indexed": false,
+        "internalType": "int24"
+      },
+      {
+        "name": "liquidityAdded",
+        "type": "uint128",
+        "indexed": false,
+        "internalType": "uint128"
+      },
+      {
+        "name": "amount0Desired",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "amount1Desired",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "amount0Used",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "amount1Used",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "idle0",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "idle1",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "swapLoss",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "currentTick",
+        "type": "int24",
+        "indexed": false,
+        "internalType": "int24"
+      }
     ],
     "anonymous": false
   },
@@ -322,16 +656,66 @@ export const ICorePoolManagerAbi = [
     "type": "event",
     "name": "LiquidityRemoved",
     "inputs": [
-      { "name": "tokenId", "type": "uint256", "indexed": true, "internalType": "uint256" },
-      { "name": "tickLower", "type": "int24", "indexed": false, "internalType": "int24" },
-      { "name": "tickUpper", "type": "int24", "indexed": false, "internalType": "int24" },
-      { "name": "liquidityRemoved", "type": "uint128", "indexed": false, "internalType": "uint128" },
-      { "name": "liquidityRemaining", "type": "uint128", "indexed": false, "internalType": "uint128" },
-      { "name": "amount0Removed", "type": "uint256", "indexed": false, "internalType": "uint256" },
-      { "name": "amount1Removed", "type": "uint256", "indexed": false, "internalType": "uint256" },
-      { "name": "fees0Collected", "type": "uint256", "indexed": false, "internalType": "uint256" },
-      { "name": "fees1Collected", "type": "uint256", "indexed": false, "internalType": "uint256" },
-      { "name": "currentTick", "type": "int24", "indexed": false, "internalType": "int24" }
+      {
+        "name": "tokenId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "tickLower",
+        "type": "int24",
+        "indexed": false,
+        "internalType": "int24"
+      },
+      {
+        "name": "tickUpper",
+        "type": "int24",
+        "indexed": false,
+        "internalType": "int24"
+      },
+      {
+        "name": "liquidityRemoved",
+        "type": "uint128",
+        "indexed": false,
+        "internalType": "uint128"
+      },
+      {
+        "name": "liquidityRemaining",
+        "type": "uint128",
+        "indexed": false,
+        "internalType": "uint128"
+      },
+      {
+        "name": "amount0Removed",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "amount1Removed",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "fees0Collected",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "fees1Collected",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "currentTick",
+        "type": "int24",
+        "indexed": false,
+        "internalType": "int24"
+      }
     ],
     "anonymous": false
   },
@@ -339,8 +723,18 @@ export const ICorePoolManagerAbi = [
     "type": "event",
     "name": "LiquidityWithdrawn",
     "inputs": [
-      { "name": "amount0", "type": "uint256", "indexed": false, "internalType": "uint256" },
-      { "name": "amount1", "type": "uint256", "indexed": false, "internalType": "uint256" }
+      {
+        "name": "amount0",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "amount1",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
     ],
     "anonymous": false
   },
@@ -348,10 +742,73 @@ export const ICorePoolManagerAbi = [
     "type": "event",
     "name": "PositionRebalanced",
     "inputs": [
-      { "name": "oldTokenId", "type": "uint256", "indexed": true, "internalType": "uint256" },
-      { "name": "newTokenId", "type": "uint256", "indexed": true, "internalType": "uint256" },
-      { "name": "newTickLower", "type": "int24", "indexed": false, "internalType": "int24" },
-      { "name": "newTickUpper", "type": "int24", "indexed": false, "internalType": "int24" }
+      {
+        "name": "oldTokenId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "newTokenId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "newTickLower",
+        "type": "int24",
+        "indexed": false,
+        "internalType": "int24"
+      },
+      {
+        "name": "newTickUpper",
+        "type": "int24",
+        "indexed": false,
+        "internalType": "int24"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "PositionSnapshot",
+    "inputs": [
+      {
+        "name": "tokenId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "amount0Before",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "amount1Before",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "amount0After",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "amount1After",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "currentTick",
+        "type": "int24",
+        "indexed": false,
+        "internalType": "int24"
+      }
     ],
     "anonymous": false
   },
@@ -359,10 +816,30 @@ export const ICorePoolManagerAbi = [
     "type": "event",
     "name": "PositionUpgrade",
     "inputs": [
-      { "name": "tokenId", "type": "uint256", "indexed": false, "internalType": "uint256" },
-      { "name": "tickLower", "type": "int24", "indexed": false, "internalType": "int24" },
-      { "name": "tickUpper", "type": "int24", "indexed": false, "internalType": "int24" },
-      { "name": "liquidity", "type": "uint128", "indexed": false, "internalType": "uint128" }
+      {
+        "name": "tokenId",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "tickLower",
+        "type": "int24",
+        "indexed": false,
+        "internalType": "int24"
+      },
+      {
+        "name": "tickUpper",
+        "type": "int24",
+        "indexed": false,
+        "internalType": "int24"
+      },
+      {
+        "name": "liquidity",
+        "type": "uint128",
+        "indexed": false,
+        "internalType": "uint128"
+      }
     ],
     "anonymous": false
   },
@@ -370,7 +847,12 @@ export const ICorePoolManagerAbi = [
     "type": "event",
     "name": "RangeWidthUpdated",
     "inputs": [
-      { "name": "rangeWidth", "type": "int24", "indexed": false, "internalType": "int24" }
+      {
+        "name": "rangeWidth",
+        "type": "int24",
+        "indexed": false,
+        "internalType": "int24"
+      }
     ],
     "anonymous": false
   },
@@ -378,8 +860,18 @@ export const ICorePoolManagerAbi = [
     "type": "event",
     "name": "RewardsHarvested",
     "inputs": [
-      { "name": "tokens", "type": "address[]", "indexed": false, "internalType": "address[]" },
-      { "name": "amounts", "type": "uint256[]", "indexed": false, "internalType": "uint256[]" }
+      {
+        "name": "tokens",
+        "type": "address[]",
+        "indexed": false,
+        "internalType": "address[]"
+      },
+      {
+        "name": "amounts",
+        "type": "uint256[]",
+        "indexed": false,
+        "internalType": "uint256[]"
+      }
     ],
     "anonymous": false
   },
@@ -387,8 +879,18 @@ export const ICorePoolManagerAbi = [
     "type": "event",
     "name": "SlippageSet",
     "inputs": [
-      { "name": "swapSlippage", "type": "uint256", "indexed": false, "internalType": "uint256" },
-      { "name": "mintSlippage", "type": "uint256", "indexed": false, "internalType": "uint256" }
+      {
+        "name": "swapSlippage",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "mintSlippage",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
     ],
     "anonymous": false
   },
@@ -396,14 +898,54 @@ export const ICorePoolManagerAbi = [
     "type": "event",
     "name": "SwapExecuted",
     "inputs": [
-      { "name": "tokenIn", "type": "address", "indexed": true, "internalType": "address" },
-      { "name": "tokenOut", "type": "address", "indexed": true, "internalType": "address" },
-      { "name": "amountIn", "type": "uint256", "indexed": false, "internalType": "uint256" },
-      { "name": "amountOut", "type": "uint256", "indexed": false, "internalType": "uint256" },
-      { "name": "expectedAmountOut", "type": "uint256", "indexed": false, "internalType": "uint256" },
-      { "name": "swapLoss", "type": "uint256", "indexed": false, "internalType": "uint256" },
-      { "name": "tickBefore", "type": "int24", "indexed": false, "internalType": "int24" },
-      { "name": "tickAfter", "type": "int24", "indexed": false, "internalType": "int24" }
+      {
+        "name": "tokenIn",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "tokenOut",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "amountIn",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "amountOut",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "expectedAmountOut",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "swapLoss",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "tickBefore",
+        "type": "int24",
+        "indexed": false,
+        "internalType": "int24"
+      },
+      {
+        "name": "tickAfter",
+        "type": "int24",
+        "indexed": false,
+        "internalType": "int24"
+      }
     ],
     "anonymous": false
   },
@@ -411,8 +953,18 @@ export const ICorePoolManagerAbi = [
     "type": "event",
     "name": "TickBoundsSet",
     "inputs": [
-      { "name": "minTick", "type": "int24", "indexed": false, "internalType": "int24" },
-      { "name": "maxTick", "type": "int24", "indexed": false, "internalType": "int24" }
+      {
+        "name": "minTick",
+        "type": "int24",
+        "indexed": false,
+        "internalType": "int24"
+      },
+      {
+        "name": "maxTick",
+        "type": "int24",
+        "indexed": false,
+        "internalType": "int24"
+      }
     ],
     "anonymous": false
   },
@@ -506,4 +1058,5 @@ export const ICorePoolManagerAbi = [
     "name": "ZeroAmounts",
     "inputs": []
   }
-] as const;
+]
+ as const;
