@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "ponder dev",
     "start": "ponder start",
-    "codegen": "ponder codegen"
+    "codegen": "ponder codegen",
+    "frontend": "npx serve public -p 8000"
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,4 @@
-export const ICorePoolManagerAbi =
-[
+export default [
   {
     "type": "function",
     "name": "canRebalance",
@@ -1058,5 +1057,4 @@ export const ICorePoolManagerAbi =
     "name": "ZeroAmounts",
     "inputs": []
   }
-]
- as const;
+] as const;
